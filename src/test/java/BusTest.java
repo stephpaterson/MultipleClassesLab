@@ -6,7 +6,9 @@ import static org.junit.Assert.assertEquals;
 public class BusTest {
 
     private Bus bus;
+    private Bus busTwo;
     private Person person;
+
 
     @Before
     public void before(){
@@ -35,4 +37,19 @@ public class BusTest {
         assertEquals(1, bus.getPassengerList());
     }
 
+    @Test
+    public void cantAddPassengerToBus() {
+        busTwo = new Bus("Edinburgh", 2);
+        busTwo.addPassenger(person);
+        busTwo.addPassenger(person);
+        busTwo.addPassenger(person);
+        assertEquals(2, busTwo.getPassengerList());
+    }
+
+    @Test
+    public void canRemovePassenger() {
+        bus.addPassenger(person);
+        bus.removePassenger();
+        assertEquals(0, bus.getPassengerList());
+    }
 }
