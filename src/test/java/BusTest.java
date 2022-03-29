@@ -17,5 +17,11 @@ public class BusTest {
         assertEquals("Glasgow", bus.getDestination());
     }
 
+    @Test
+    public void busHasCapacity() {
+        assertEquals(30, bus.getCapacity());
+    }
+
+
 
 }

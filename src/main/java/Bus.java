@@ -13,4 +13,8 @@ public class Bus {
     public String getDestination() {
         return this.busDestination;
     }
+
+    public int getCapacity() {
+        return this.capacity;
+    }
 }
